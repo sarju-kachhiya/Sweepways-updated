@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hero Section</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
 
   <!-- Josefin Sans Font -->
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,9 +16,10 @@
     body {
       margin: 0;
       font-family: "Josefin Sans", sans-serif;
-      background: linear-gradient(0deg, #C7246B 0%, #380354 100%);
+      /* background: linear-gradient(0deg, #C7246B 0%, #380354 100%); */
       color: #fff;
       overflow-x: hidden;
+      background-color: #0F0233;
     }
 
     /* ===== HEADER ===== */
@@ -49,6 +53,7 @@
     /* ===== HERO ===== */
     .hero-section {
       position: relative;
+      background: linear-gradient(90deg, #C7246B 0%, #380354 75%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -102,7 +107,7 @@
     .hero-car {
       position: relative;
       z-index: 2;
-      max-width: 600px;
+      max-width: 800px;
       animation: floatCar 4s ease-in-out infinite;
     }
 
@@ -120,14 +125,790 @@
       line-height: 0;
       z-index: 1;
     }
-    .curve-shape svg {
-      display: block;
-      width: 100%;
-      height: 200px;
-    }
+    .curve-shape img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;  /* always full width */
+  height: auto;
+  z-index: 1;
+}
     .curve-shape path {
       fill: #1d0033;
     }
+
+    .howto-section {
+  padding: 100px 0;
+  background: #0F0233; /* deep background */
+  color: #fff;
+}
+
+.section-eyebrow {
+  color: #f6c90e;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  color: #cfd2ff;
+  margin-bottom: 40px;
+}
+
+.step-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 30px 20px;
+  color: #fff;
+  background: url("assets/design_images/card-bg.jpg") no-repeat center/cover;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #7d2ae8, #ff007f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.step-card h4 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #e2e2ff;
+  margin: 0;
+}
+
+.howto-illustration img {
+  max-width: 100%;
+}
+
+@media(max-width: 992px){
+  .section-title {
+    font-size: 2rem;
+  }
+  .step-card { margin-bottom: 20px; }
+  .howto-illustration { margin-top: 40px; }
+}
+
+.contest-section {
+  background: url("../assets/sec3_bg.png    ") no-repeat center center/cover;
+  color: #fff;
+  margin-bottom: 4rem;
+  
+}
+
+.small-text{
+    font-size: 1.5rem;
+}
+
+.contest-card {
+  background: linear-gradient(180deg, #5536da 0%, #3a1e9b 100%);
+  /* border-radius: 15px; */
+  width: 380px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.contest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Heart icon */
+.card-header {
+  height: 25px;
+  position: relative;
+  padding: 10px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: #ff4d8d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-icon i {
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Car image */
+.car-image {
+  position: relative;
+  padding: 10px 0 30px;
+  text-align: center;
+}
+
+.car-image img {
+  width: 85%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Contest Badge */
+.contest-badge {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, #ff2d78, #d61b65);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  font-size: 0.7rem;
+  z-index: 3;
+}
+
+.contest-badge strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* Body */
+.card-body {
+  background: #3b1f9c;
+  text-align: center;
+  padding: 35px 10px 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.title-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contest-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.contest-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00ff90;
+  margin: 0;
+}
+
+
+.ticket-text {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.card-footer {
+  background: #2c1577;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-item i {
+  font-size: 16px;
+}
+
+.footer-item:first-child i {
+  color: #ffc73b;
+}
+
+.footer-item:last-child i {
+  color: #00c8ff;
+}
+
+.footer-item span {
+  color: #fff;
+  font-weight: 400;
+}
+
+/* Fix overlap */
+.contest-card {
+  padding-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+  .contest-badge {
+    width: 65px;
+    height: 65px;
+    font-size: 0.7rem;
+  }
+}
+.winners-section {
+  background-image: url(assets/winner-bg.png);
+  min-height: 70vh;
+}
+/* Keep container content above overlay */
+.winners-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===== TEXT STYLING ===== */
+.subtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #FFB200;
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.section-title span {
+  color: #fff;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #c7b7ff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== WINNER BOX ===== */
+.winner-box {
+  position: relative;
+  background: linear-gradient(90deg, #C7246B 0%, #380354 75%);
+  /* border-radius: 20px; */
+  padding: 20px 20px;
+  max-width: 1750px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== CAR IMAGE ===== */
+.car-img {
+  position: relative;
+  z-index: 2;
+  transform: translateY(10px);
+  max-width: 80%;
+  transition: transform 0.4s ease;
+}
+.car-img:hover {
+  transform: translateY(0);
+}
+
+/* ===== WINNER CARD ===== */
+.winner-card {
+  position: relative;
+  background-image: url(assets/card-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 18px;
+  padding: 60px 20px 25px;
+  max-width: 220px;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  margin-top: -50px;
+  box-shadow: 0px 8px 20px rgba(255, 106, 0, 0.5);
+}
+
+.winner-img {
+  width: 140px;
+  height: auto;
+  /* border-radius: 60px; */
+  /* border: 4px solid #fff; */
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background: #fff; */
+}
+
+.winner-details h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 160px;
+}
+
+.winner-details p {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.winner-details span {
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .winner-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .winner-card {
+    margin-top: 30px;
+  }
+  .car-img {
+    max-width: 100%;
+  }
+}
+ /* ===== BACKGROUND ===== */
+.stats-section {
+  position: relative;
+  background-color: #0F0233; /* Base color */
+  overflow: hidden;
+  padding: 120px 0 100px;
+  color: #fff;
+}
+
+/* Background image placed above base color */
+.stats-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/stats-bg.png') no-repeat center top / cover;
+  opacity: 0.8; /* Adjust visibility of image */
+  z-index: 1;
+}
+
+.stats-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TEXT ===== */
+.subtitle {
+  color: #FFB200;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.title span {
+  color: #fff;
+}
+
+.desc {
+  color: #C7B7FF;
+  font-size: 1rem;
+  max-width: 750px;
+  margin: 15px auto 0;
+}
+
+/* ===== STAT BOXES ===== */
+.stat-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, #6E00FF 0%, #B441F9 100%);
+  border-radius: 12px;
+  padding: 25px 30px;
+  height: 120px;
+  box-shadow: 0 8px 25px rgba(111, 0, 255, 0.3);
+  transition: all 0.4s ease;
+  text-align: left;
+}
+
+.stat-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(111, 0, 255, 0.5);
+}
+
+.stat-icon {
+  width: 55px;
+  height: 55px;
+  margin-right: 20px;
+}
+
+.stat-box h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.stat-box p {
+  font-size: 0.95rem;
+  color: #E8DCFF;
+  margin-bottom: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .stat-box {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .stat-icon {
+    margin: 0 0 10px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+/* ===== BASE SECTION ===== */
+    .features-section {
+      background-color: #0F0233;
+      padding: 100px 0;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* ===== FEATURE CARD DESIGN ===== */
+    .feature-card {
+      background: linear-gradient(135deg, #d240ff 0%, #6f00ff 100%);
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      padding: 30px 25px;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 25px rgba(111, 0, 255, 0.3);
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(111, 0, 255, 0.5);
+    }
+
+    /* ===== ICON ===== */
+    .feature-icon {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 15px;
+      object-fit: contain;
+    }
+
+    /* ===== TEXT ===== */
+    .feature-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .feature-text {
+      font-size: 0.9rem;
+      color: #e5d8ff;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .feature-cta {
+      font-size: 0.85rem;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    /* ===== RIGHT SIDE TEXT ===== */
+    .section-subtitle {
+      color: #FFB200;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+    }
+
+    .section-title {
+      font-weight: 800;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .section-desc {
+      color: #c7b7ff;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 430px;
+      margin-bottom: 20px;
+    }
+
+    .feature-link {
+      color: #FFB200;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .feature-link:hover {
+      color: #ffca4d;
+      text-decoration: underline;
+    }
+
+    /* ===== LAYOUT STRUCTURE ===== */
+    .features-left {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* reduced column gap */
+    }
+
+    .features-column {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .features-column:nth-child(2) {
+      margin-top: 40px; /* staggered effect */
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      .features-section {
+        text-align: center;
+      }
+
+      .features-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .features-column:nth-child(2) {
+        margin-top: 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+    /* ===== BASE FOOTER ===== */
+    footer {
+      background-color: #160746;
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      padding-top: 200px;
+    }
+
+    /* ===== CURVED IMAGE BG ===== */
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 220px;
+      background: url('assets/footer bg.png') no-repeat center top;
+      background-size: cover;
+      z-index: 0;
+    }
+
+    /* ===== SUBSCRIBE BOX ===== */
+    .subscribe-box {
+      background: linear-gradient(90deg, #6e00ff 0%, #a94efb 50%, #5b9df9 100%);
+      border-radius: 20px;
+      padding: 35px 40px;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-text h6 {
+      color: #ffb200;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+    }
+
+    .subscribe-text h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .subscribe-form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 5px 5px 5px 20px;
+      flex-wrap: nowrap;
+      min-width: 300px;
+    }
+
+    .subscribe-form input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      width: 200px;
+      font-size: 0.95rem;
+    }
+
+    .subscribe-form input::placeholder {
+      color: #d4caff;
+    }
+
+    .subscribe-btn {
+      border: none;
+      border-radius: 50px;
+      padding: 10px 25px;
+      background: linear-gradient(90deg, #ff007a, #ffb200);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== FOOTER BOTTOM LINKS ===== */
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 100px;
+      padding: 25px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-bottom .row {
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #c9bffb;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    /* vertical divider */
+    .footer-links a:not(:last-child)::after {
+      content: "|";
+      color: rgba(255, 255, 255, 0.2);
+      margin-left: 15px;
+    }
+
+    .footer-links a:hover {
+      color: #ffb200;
+    }
+
+    .copyright {
+      color: #c9bffb;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      color: #c9bffb;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(90deg, #ff007a, #ffb200);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .footer-bottom .row {
+        text-align: center;
+        gap: 20px;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+
+      .copyright {
+        text-align: center;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -169,16 +950,509 @@
 
         <!-- Right image -->
         <div class="col-md-6 text-center">
-          <img src="car.png" alt="Car" class="hero-car img-fluid">
+          <img src="assets/hero-car (1).png" alt="Car" class="hero-car img-fluid">
         </div>
       </div>
     </div>
 
     <!-- Pink/Purple SVG curve -->
     <div class="curve-shape">
-      <img src="assets/hero-shape.jpg.png" alt="">
+      <img src="assets/hero-shape.png" alt="">
     </div>
   </section>
+
+  <section class="howto-section">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Column -->
+      <div class="col-lg-7">
+        <h6 class="section-eyebrow">Need to know about</h6>
+        <h2 class="section-title">HOW TO PLAY</h2>
+        <p class="section-sub">Follow these 3 easy steps!</p>
+
+        <div class="row g-4">
+          <!-- Step 1 -->
+          <div class="col-md-4">
+            <div class="step-card text-center">
+              <div class="step-icon"><img src="assets/design_images/sec2_cardimg1.png" alt=""></div>
+              <h4>CHOOSE</h4>
+              <p>Register to RIFA &amp; choose your contest</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-4">
+            <div class="step-card text-center">
+              <div class="step-icon"><img src="assets/design_images/sec2_cardimg2.png" alt=""></div>
+              <h4>BUY</h4>
+              <p>Pick your numbers &amp; complete your purchase</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-4">
+            <div class="step-card text-center">
+              <div class="step-icon"><img src="assets/design_images/sec2_cardimg3.png" alt=""></div>
+              <h4>WIN</h4>
+              <p>Start dreaming, you're almost there</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-5 text-center howto-illustration">
+        <img src="assets//sec2_illustration.png" alt="Illustration">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contest-section text-center text-white py-5 ">
+  <div class="container mb-5">
+    <p class="text-warning mb-3">Try your chance at winning</p>
+    <h2 class="fw-semi-bold display-4 mb-2">CURRENT CONTEST</h2>
+    <p class="text-white-50 mb-5 small-text">Participants buy tickets and lots are drawn to determine the winners.</p>
+
+    <div class="row g-4 justify-content-center mb-5">
+
+      <!-- Contest Card -->
+      <div class="col-md-4 col-sm-6">
+        <a href="offer.html">
+        <div class="contest-card">
+  <div class="card-header">
+    <div class="heart-icon"><i class="fa fa-heart-o"></i></div>
+  </div>
+
+  <div class="car-image">
+    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <div class="contest-badge">
+      <span>Contest No:</span>
+      <strong>B2T</strong>
+    </div>
+  </div>
+
+  <div class="card-body">
+  <div class=" row">
+    <div class="col-lg-6">
+    <h5 class="contest-title">The Breeze <br> Zodiac IX</h5>
+    </div>
+    <div class="col-lg-6  ">
+    <p class="contest-price">$3.99</p>
+    <p class="ticket-text">Ticket Price</p>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="card-footer">
+    <div class="footer-item">
+      <i class="fa fa-clock-o"></i><span>5d</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa fa-ticket"></i><span>9805 Remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+
+      </div>
+
+<!-- Contest Card -->
+      <div class="col-md-4 col-sm-6">
+        <a href="offer.html">
+        <div class="contest-card">
+  <div class="card-header">
+    <div class="heart-icon"><i class="fa fa-heart-o"></i></div>
+  </div>
+
+  <div class="car-image">
+    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <div class="contest-badge">
+      <span>Contest No:</span>
+      <strong>B2T</strong>
+    </div>
+  </div>
+
+  <div class="card-body">
+  <div class=" row">
+    <div class="col-lg-6">
+    <h5 class="contest-title">The Breeze <br> Zodiac IX</h5>
+    </div>
+    <div class="col-lg-6  ">
+    <p class="contest-price">$3.99</p>
+    <p class="ticket-text">Ticket Price</p>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="card-footer">
+    <div class="footer-item">
+      <i class="fa fa-clock-o"></i><span>5d</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa fa-ticket"></i><span>9805 Remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+
+      </div>
+
+      <!-- Contest Card -->
+      <div class="col-md-4 col-sm-6">
+        <a href="offer.html">
+        <div class="contest-card">
+  <div class="card-header">
+    <div class="heart-icon"><i class="fa fa-heart-o"></i></div>
+  </div>
+
+  <div class="car-image">
+    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <div class="contest-badge">
+      <span>Contest No:</span>
+      <strong>B2T</strong>
+    </div>
+  </div>
+
+  <div class="card-body">
+  <div class=" row">
+    <div class="col-lg-6">
+    <h5 class="contest-title">The Breeze <br> Zodiac IX</h5>
+    </div>
+    <div class="col-lg-6  ">
+    <p class="contest-price">$3.99</p>
+    <p class="ticket-text">Ticket Price</p>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="card-footer">
+    <div class="footer-item">
+      <i class="fa fa-clock-o"></i><span>5d</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa fa-ticket"></i><span>9805 Remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+
+      </div>
+
+      <!-- Contest Card -->
+      <div class="col-md-4 col-sm-6">
+        <a href="offer.html">
+        <div class="contest-card">
+  <div class="card-header">
+    <div class="heart-icon"><i class="fa fa-heart-o"></i></div>
+  </div>
+
+  <div class="car-image">
+    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <div class="contest-badge">
+      <span>Contest No:</span>
+      <strong>B2T</strong>
+    </div>
+  </div>
+
+  <div class="card-body">
+  <div class=" row">
+    <div class="col-lg-6">
+    <h5 class="contest-title">The Breeze <br> Zodiac IX</h5>
+    </div>
+    <div class="col-lg-6  ">
+    <p class="contest-price">$3.99</p>
+    <p class="ticket-text">Ticket Price</p>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="card-footer">
+    <div class="footer-item">
+      <i class="fa fa-clock-o"></i><span>5d</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa fa-ticket"></i><span>9805 Remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+
+      </div>
+
+      <!-- Contest Card -->
+      <div class="col-md-4 col-sm-6">
+        <a href="offer.html">
+        <div class="contest-card">
+  <div class="card-header">
+    <div class="heart-icon"><i class="fa fa-heart-o"></i></div>
+  </div>
+
+  <div class="car-image">
+    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <div class="contest-badge">
+      <span>Contest No:</span>
+      <strong>B2T</strong>
+    </div>
+  </div>
+
+  <div class="card-body">
+  <div class=" row">
+    <div class="col-lg-6">
+    <h5 class="contest-title">The Breeze <br> Zodiac IX</h5>
+    </div>
+    <div class="col-lg-6  ">
+    <p class="contest-price">$3.99</p>
+    <p class="ticket-text">Ticket Price</p>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="card-footer">
+    <div class="footer-item">
+      <i class="fa fa-clock-o"></i><span>5d</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa fa-ticket"></i><span>9805 Remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+
+      </div>
+
+      <!-- Contest Card -->
+      <div class="col-md-4 col-sm-6">
+        <a href="offer.html">
+        <div class="contest-card">
+  <div class="card-header">
+    <div class="heart-icon"><i class="fa fa-heart-o"></i></div>
+  </div>
+
+  <div class="car-image">
+    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <div class="contest-badge">
+      <span>Contest No:</span>
+      <strong>B2T</strong>
+    </div>
+  </div>
+
+  <div class="card-body">
+  <div class=" row">
+    <div class="col-lg-6">
+    <h5 class="contest-title">The Breeze <br> Zodiac IX</h5>
+    </div>
+    <div class="col-lg-6  ">
+    <p class="contest-price">$3.99</p>
+    <p class="ticket-text">Ticket Price</p>
+    </div>
+  </div>
+  
+</div>
+
+  <div class="card-footer">
+    <div class="footer-item">
+      <i class="fa fa-clock-o"></i><span>5d</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa fa-ticket"></i><span>9805 Remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="winners-section text-center text-white">
+    <!-- <div class="overlay"></div> -->
+    <div class="container position-relative py-5">
+      <p class="subtitle mb-2 mt-5">The biggest lottery winners of the month</p>
+      <h2 class="section-title">TOP TEN <span>WINNERS</span></h2>
+      <p class="desc mb-5">
+        There have been numerous winnings, but some winners were luckier than others
+      </p>
+
+      <div class="winner-box mx-auto">
+        <div class="row align-items-center justify-content-center g-0">
+          <!-- Car Image -->
+          <div class="col-md-7 col-12 text-center">
+            <img src="assets/winner-car.png" alt="Car" class="img-fluid car-img" />
+          </div>
+
+          <!-- Winner Info -->
+          <div class="col-md-5 col-12 text-center position-relative">
+            <div class="winner-card">
+              <img src="assets/winner-guy.png" alt="Winner" class="img-fluid winner-img" />
+              <div class="winner-details">
+                <h5 class="mb-1">Bennet Zacker</h5>
+                <p class="mb-0 small">Draw Date: <span>10/04/2023</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= NUMBER STATS SECTION ======= -->
+  <section class="stats-section text-center text-white mb-5 mt-5">
+    <div class="overlay"></div>
+    <div class="container position-relative">
+      <!-- Text Block -->
+      <div class="text-block py-5">
+        <p class="subtitle">Our Users Around the World</p>
+        <h2 class="title">LET THE NUMBER<br><span>SPEAK FOR US</span></h2>
+        <p class="desc mx-auto">
+          Over the years we have provided millions of players with tickets to lotteries across the globe
+          and enjoyed having more than one million winners
+        </p>
+      </div>
+
+      <!-- Stats Boxes -->
+      <div class="row justify-content-center mt-5 g-4">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="stat-box">
+            <img src="assets/User-icon.png" alt="Users" class="stat-icon">
+            <div>
+              <h4>12000+</h4>
+              <p>Verified Users</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="stat-box">
+            <img src="assets/market-icon.png" alt="Years" class="stat-icon">
+            <div>
+              <h4>13</h4>
+              <p>Years on the market</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="stat-box">
+            <img src="assets/cust-icon.png" alt="Satisfaction" class="stat-icon">
+            <div>
+              <h4>98%</h4>
+              <p>Customer Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features-section">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- LEFT SIDE: STAGGERED CARDS -->
+        <div class="col-lg-7 mb-5 mb-lg-0">
+          <div class="features-left">
+            <!-- Column 1 -->
+            <div class="features-column">
+              <div class="feature-card">
+                <img src="assets/safe-service.png" alt="Safe Service" class="feature-icon">
+                <h5 class="feature-title">Safe Service</h5>
+                <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
+                <span class="feature-cta">Donec quis</span>
+              </div>
+
+              <div class="feature-card">
+                <img src="assets/network.png" alt="Network" class="feature-icon">
+                <h5 class="feature-title">Network</h5>
+                <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
+                <span class="feature-cta">Donec quis</span>
+              </div>
+            </div>
+
+            <!-- Column 2 (staggered down) -->
+            <div class="features-column">
+              <div class="feature-card">
+                <img src="assets/secuirity.png" alt="Security" class="feature-icon">
+                <h5 class="feature-title">Security</h5>
+                <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
+                <span class="feature-cta">Donec quis</span>
+              </div>
+
+              <div class="feature-card">
+                <img src="assets/support.png" alt="Support" class="feature-icon">
+                <h5 class="feature-title">Support</h5>
+                <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
+                <span class="feature-cta">Donec quis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: TEXT CONTENT -->
+        <div class="col-lg-5 ps-lg-5 text-center text-lg-start">
+          <p class="section-subtitle">An Exhaustive list of</p>
+          <h2 class="section-title">OUR FEATURES.</h2>
+          <p class="section-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium, elit quis vehicula interdum, 
+            sem metus iaculis sapien, sed bibendum lectus augue eu metus.
+          </p>
+          <a href="#" class="feature-link">Show all features <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container position-relative">
+      <!-- Subscribe Box -->
+      <div class="subscribe-box mx-auto mb-5">
+        <div class="subscribe-text">
+          <h6>Subscribe to Sorka</h6>
+          <h3>To Get Exclusive Benefits</h3>
+        </div>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter Your Email" required />
+          <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-3 mb-lg-0">
+            <p class="copyright mb-0">Copyright © 2025. All Rights Reserved By <strong>Rifa</strong></p>
+          </div>
+
+          <div class="col-lg-5 col-md-12 mb-3 mb-lg-0">
+            <div class="footer-links">
+              <a href="#">About</a>
+              <a href="#">FAQs</a>
+              <a href="#">Contact</a>
+              <a href="#">Terms of Services</a>
+              <a href="#">Privacy</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-12">
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
