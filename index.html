@@ -167,6 +167,9 @@
   color: #fff;
   background: url("assets/design_images/card-bg.jpg") no-repeat center/cover;
   transition: transform .3s ease, box-shadow .3s ease;
+  user-drag: none;
+    -webkit-user-drag: none; /* For WebKit browsers like Chrome/Safari */
+    user-select: none;
 }
 
 .step-card:hover {
@@ -212,6 +215,9 @@
 
 .contest-section {
   background: url("../assets/sec3_bg.png    ") no-repeat center center/cover;
+  user-drag: none;
+    -webkit-user-drag: none; 
+    user-select: none;
   color: #fff;
   margin-bottom: 4rem;
   
@@ -389,6 +395,9 @@
 .winners-section {
   background-image: url(assets/winner-bg.png);
   min-height: 70vh;
+  user-drag: none;
+    -webkit-user-drag: none; 
+    user-select: none;
 }
 /* Keep container content above overlay */
 .winners-section .container {
@@ -448,6 +457,9 @@
 .winner-card {
   position: relative;
   background-image: url(assets/card-bg.jpg);
+  user-drag: none;
+  -webkit-user-drag: none; 
+  user-select: none;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -517,6 +529,9 @@
   position: absolute;
   inset: 0;
   background: url('assets/stats-bg.png') no-repeat center top / cover;
+  user-drag: none;
+  -webkit-user-drag: none; 
+  user-select: none;
   opacity: 0.8; /* Adjust visibility of image */
   z-index: 1;
 }
@@ -751,8 +766,96 @@
       width: 100%;
       height: 220px;
       background: url('assets/footer bg.png') no-repeat center top;
+      user-drag: none;
+      -webkit-user-drag: none; 
+      user-select: none;
       background-size: cover;
       z-index: 0;
+    }
+
+    /* ===== BASE SECTION ===== */
+    .testimonial-section {
+      position: relative;
+      background: url('assets/Background.png') no-repeat center top;
+      background-size: contain;
+      background-color: #0F0233;
+      color: #fff;
+      padding: 140px 0 180px;
+      overflow: hidden;
+      size: 770vh;
+    }
+
+    /* ===== TEXT AREA ===== */
+    .testimonial-section .subtitle {
+      color: #ffb200;
+      text-transform: capitalize;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-section .section-title {
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-section .section-desc {
+      color: #e4d9ff;
+      font-size: 0.95rem;
+      max-width: 650px;
+      margin: 0 auto 60px;
+    }
+
+    /* ===== TESTIMONIAL CARD ===== */
+    .testimonial-card {
+      background: url('assets/card-bg.jpg') no-repeat center;
+      background-size: cover;
+      border-radius: 25px;
+      padding: 50px 40px;
+      max-width: 650px;
+      margin: 0 auto;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
+    }
+
+    .testimonial-card h5 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-card p {
+      font-size: 0.95rem;
+      color: #fff;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+
+    .stars i {
+      color: #ffb200;
+      font-size: 1rem;
+      margin: 0 2px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .testimonial-section .section-title {
+        font-size: 2rem;
+      }
+      .testimonial-card {
+        padding: 40px 25px;
+      }
     }
 
     /* ===== SUBSCRIBE BOX ===== */
@@ -916,7 +1019,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="assets/logo/Sweepways_White.png" alt="Logo">
+        <img src="assets/logo/Sweepways_White.png" draggable="false" alt="Logo">
       </a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
@@ -933,7 +1036,7 @@
   <section class="hero-section container-fluid px-4">
     <div class="hero-bg">
       <!-- building png -->
-      <img src="assets/hero-bg.png" alt="Buildings">
+      <img src="assets/hero-bg.png" draggable="false" alt="Buildings">
     </div>
 
     <div class="container">
@@ -950,14 +1053,14 @@
 
         <!-- Right image -->
         <div class="col-md-6 text-center">
-          <img src="assets/hero-car (1).png" alt="Car" class="hero-car img-fluid">
+          <img src="assets/hero-car (1).png" alt="Car" draggable="false" class="hero-car img-fluid">
         </div>
       </div>
     </div>
 
     <!-- Pink/Purple SVG curve -->
     <div class="curve-shape">
-      <img src="assets/hero-shape.png" alt="">
+      <img src="assets/hero-shape.png" draggable="false" alt="">
     </div>
   </section>
 
@@ -975,7 +1078,7 @@
           <!-- Step 1 -->
           <div class="col-md-4">
             <div class="step-card text-center">
-              <div class="step-icon"><img src="assets/design_images/sec2_cardimg1.png" alt=""></div>
+              <div class="step-icon"><img src="assets/design_images/sec2_cardimg1.png" draggable="false" alt=""></div>
               <h4>CHOOSE</h4>
               <p>Register to RIFA &amp; choose your contest</p>
             </div>
@@ -984,7 +1087,7 @@
           <!-- Step 2 -->
           <div class="col-md-4">
             <div class="step-card text-center">
-              <div class="step-icon"><img src="assets/design_images/sec2_cardimg2.png" alt=""></div>
+              <div class="step-icon"><img src="assets/design_images/sec2_cardimg2.png" draggable="false" alt=""></div>
               <h4>BUY</h4>
               <p>Pick your numbers &amp; complete your purchase</p>
             </div>
@@ -993,7 +1096,7 @@
           <!-- Step 3 -->
           <div class="col-md-4">
             <div class="step-card text-center">
-              <div class="step-icon"><img src="assets/design_images/sec2_cardimg3.png" alt=""></div>
+              <div class="step-icon"><img src="assets/design_images/sec2_cardimg3.png" draggable="false" alt=""></div>
               <h4>WIN</h4>
               <p>Start dreaming, you're almost there</p>
             </div>
@@ -1003,7 +1106,7 @@
 
       <!-- Right Column -->
       <div class="col-lg-5 text-center howto-illustration">
-        <img src="assets//sec2_illustration.png" alt="Illustration">
+        <img src="assets//sec2_illustration.png" draggable="false" alt="Illustration">
       </div>
     </div>
   </div>
@@ -1026,7 +1129,7 @@
   </div>
 
   <div class="car-image">
-    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <img src="assets/yellow_car.png" draggable="false" alt="The Breeze Zodiac IX">
     <div class="contest-badge">
       <span>Contest No:</span>
       <strong>B2T</strong>
@@ -1068,7 +1171,7 @@
   </div>
 
   <div class="car-image">
-    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <img src="assets/yellow_car.png" draggable="false" alt="The Breeze Zodiac IX">
     <div class="contest-badge">
       <span>Contest No:</span>
       <strong>B2T</strong>
@@ -1110,7 +1213,7 @@
   </div>
 
   <div class="car-image">
-    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <img src="assets/yellow_car.png" draggable="false" alt="The Breeze Zodiac IX">
     <div class="contest-badge">
       <span>Contest No:</span>
       <strong>B2T</strong>
@@ -1152,7 +1255,7 @@
   </div>
 
   <div class="car-image">
-    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <img src="assets/yellow_car.png" draggable="false" alt="The Breeze Zodiac IX">
     <div class="contest-badge">
       <span>Contest No:</span>
       <strong>B2T</strong>
@@ -1194,7 +1297,7 @@
   </div>
 
   <div class="car-image">
-    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <img src="assets/yellow_car.png" draggable="false" alt="The Breeze Zodiac IX">
     <div class="contest-badge">
       <span>Contest No:</span>
       <strong>B2T</strong>
@@ -1236,7 +1339,7 @@
   </div>
 
   <div class="car-image">
-    <img src="assets/yellow_car.png" alt="The Breeze Zodiac IX">
+    <img src="assets/yellow_car.png" draggable="false"   alt="The Breeze Zodiac IX">
     <div class="contest-badge">
       <span>Contest No:</span>
       <strong>B2T</strong>
@@ -1286,13 +1389,13 @@
         <div class="row align-items-center justify-content-center g-0">
           <!-- Car Image -->
           <div class="col-md-7 col-12 text-center">
-            <img src="assets/winner-car.png" alt="Car" class="img-fluid car-img" />
+            <img src="assets/winner-car.png" draggable="false" alt="Car" class="img-fluid car-img" />
           </div>
 
           <!-- Winner Info -->
           <div class="col-md-5 col-12 text-center position-relative">
             <div class="winner-card">
-              <img src="assets/winner-guy.png" alt="Winner" class="img-fluid winner-img" />
+              <img src="assets/winner-guy.png" draggable="false" alt="Winner" class="img-fluid winner-img" />
               <div class="winner-details">
                 <h5 class="mb-1">Bennet Zacker</h5>
                 <p class="mb-0 small">Draw Date: <span>10/04/2023</span></p>
@@ -1322,7 +1425,7 @@
       <div class="row justify-content-center mt-5 g-4">
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="stat-box">
-            <img src="assets/User-icon.png" alt="Users" class="stat-icon">
+            <img src="assets/User-icon.png" draggable="false" alt="Users" class="stat-icon">
             <div>
               <h4>12000+</h4>
               <p>Verified Users</p>
@@ -1331,7 +1434,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="stat-box">
-            <img src="assets/market-icon.png" alt="Years" class="stat-icon">
+            <img src="assets/market-icon.png" draggable="false" alt="Years" class="stat-icon">
             <div>
               <h4>13</h4>
               <p>Years on the market</p>
@@ -1340,7 +1443,7 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="stat-box">
-            <img src="assets/cust-icon.png" alt="Satisfaction" class="stat-icon">
+            <img src="assets/cust-icon.png" draggable="false" alt="Satisfaction" class="stat-icon">
             <div>
               <h4>98%</h4>
               <p>Customer Satisfaction</p>
@@ -1360,14 +1463,14 @@
             <!-- Column 1 -->
             <div class="features-column">
               <div class="feature-card">
-                <img src="assets/safe-service.png" alt="Safe Service" class="feature-icon">
+                <img src="assets/safe-service.png" draggable="false" alt="Safe Service" class="feature-icon">
                 <h5 class="feature-title">Safe Service</h5>
                 <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
                 <span class="feature-cta">Donec quis</span>
               </div>
 
               <div class="feature-card">
-                <img src="assets/network.png" alt="Network" class="feature-icon">
+                <img src="assets/network.png" draggable="false" alt="Network" class="feature-icon">
                 <h5 class="feature-title">Network</h5>
                 <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
                 <span class="feature-cta">Donec quis</span>
@@ -1377,14 +1480,14 @@
             <!-- Column 2 (staggered down) -->
             <div class="features-column">
               <div class="feature-card">
-                <img src="assets/secuirity.png" alt="Security" class="feature-icon">
+                <img src="assets/secuirity.png" draggable="false" alt="Security" class="feature-icon">
                 <h5 class="feature-title">Security</h5>
                 <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
                 <span class="feature-cta">Donec quis</span>
               </div>
 
               <div class="feature-card">
-                <img src="assets/support.png" alt="Support" class="feature-icon">
+                <img src="assets/support.png" draggable="false" alt="Support" class="feature-icon">
                 <h5 class="feature-title">Support</h5>
                 <p class="feature-text">Nulla ultricies in nulla ac efficitur. In vel neque arcu.</p>
                 <span class="feature-cta">Donec quis</span>
@@ -1404,6 +1507,34 @@
           <a href="#" class="feature-link">Show all features <i class="bi bi-arrow-right"></i></a>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= TESTIMONIAL SECTION ======= -->
+  <section class="testimonial-section text-center">
+    <div class="container position-relative">
+      <p class="subtitle">Testimonial</p>
+      <h2 class="section-title">OUR HAPPY CUSTOMERS<br>ALL AROUND THE WORLD</h2>
+      <p class="section-desc">
+        With over 12 years of experience as the world’s leading online lottery service provider,
+        find out what our members have to say about us!
+      </p>
+
+      <!-- Testimonial Card -->
+      <div class="testimonial-card">
+        <img src="assets/user-img.png" draggable="false" alt="Customer Photo">
+        <h5>Dave Ford</h5>
+        <p>
+          "Unbelievable — this is a dream come true! No way would I ever think I would own a car like this."
+        </p>
+        <div class="stars">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
       </div>
     </div>
   </section>
